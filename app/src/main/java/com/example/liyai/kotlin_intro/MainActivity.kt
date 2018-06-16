@@ -18,10 +18,9 @@ class MainActivity : AppCompatActivity() {
         val toolbar = findViewById<View>(R.id.toolbar) as Toolbar
         setSupportActionBar(toolbar)
 
-        val dataManager = DataManager()
         val adapaterCourses = ArrayAdapter<CourseInfo>(this,
                 android.R.layout.simple_spinner_item,
-                dataManager.courses.values.toList())
+                DataManager.courses.values.toList())
         adapaterCourses.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
 
         spinnerCourses.adapter = adapaterCourses
